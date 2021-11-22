@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useEffect, useRef, useState } from "react";
 import { useTable, useSortBy, useExpanded, usePagination, useBlockLayout } from 'react-table'
 import Button from 'react-bootstrap/Button'
@@ -85,7 +86,7 @@ const DataGrid: any = (props: DataGridProps) => {
         toggleHideAllColumns,
         state: { pageIndex, pageSize },
         totalColumnsWidth,
-    } = useTable({
+    }: any = useTable({
         columns,
         data,
         initialState: { pageIndex: 0 },
